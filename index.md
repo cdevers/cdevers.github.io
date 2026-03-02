@@ -1,6 +1,5 @@
 ---
 layout: home
-
-Bio here. 
 ---
+Bio line here. 
 
