@@ -1,2 +1,3 @@
 # cdevers.github.io
-Chris Devers @ GitHub
+
+This is the initial stub for Chris Devers @ GitHub.
