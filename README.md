@@ -1,3 +1,3 @@
-# Hello
+# Chris Devers, Internet Person
 
-This is the initial stub for Chris Devers @ GitHub.
+This is where the site header goes. Some day, there might even be an interesting one here.
