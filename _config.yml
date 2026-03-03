@@ -1,3 +1,21 @@
 theme: minima
 title: Chris Devers at GitHub
 description: Chris Devers, internet person.
+
+# Your name, used in the footer and optionally in the header
+author:
+  name: Chris Devers
+
+# Makes Jekyll pick up pages from _pages/ folder
+include:
+  - _pages
+
+# Which pages appear in the header nav (minima uses this if you keep the default header)
+# Since we're overriding header.html, this is just for reference
+header_pages:
+  - _pages/about.md
+  - _pages/social.md
+
+# Minima theme skin options: classic (default), dark, auto, solarized
+minima:
+  skin: auto   # auto = respects visitor's OS dark/light preference

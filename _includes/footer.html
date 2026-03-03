@@ -1,1 +1,10 @@
-<h4> Thank you for reading, come back soon. </h4>
+<footer class="site-footer">
+  <div class="wrapper">
+    <p>
+      &copy; {{ site.time | date: '%Y' }} {{ site.author.name | default: site.title }}
+      &mdash; <a href="/about">About</a>
+      &mdash; <a href="/social">Contact</a>
+      &mdash; <a href="{{ "/feed.xml" | relative_url }}">RSS</a>
+    </p>
+  </div>
+</footer>
