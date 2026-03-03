@@ -25,7 +25,7 @@ Titles I’ve worked on include:
 1. [Terraform Cookbook](https://www.oreilly.com/library/view/terraform-cookbook/9798341639140/) by Kerim Satirli, Taylor Dolezal (2024)
 1. [IT Necessities Report For A Distributed World](https://www.oreilly.com/library/view/it-necessities-for/9781098112158/) by Ryan Bacon, Kim Crawley (2021)
 1. [Learning Swift, 3rd Edition](https://www.oreilly.com/library/view/learning-swift-3rd/9781491987568/) by Jonathon Manning, Paris Buttfield-Addison, Tim Nugent (2019)
-1. [Modern Linux Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/) (2019)
+1. [Modern Linux Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/) (2019)
    - This title evolved into [Modern System Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/) (2022), for which I contributed some of the material, including the chapter on Storage management.
 1. [Developing Open Cloud Native Microservices](https://www.oreilly.com/library/view/developing-open-cloud/9781492052753/) by Graham Charters, Sebastian Daschner, Pratik Patel, Steve Poole (2019)
 1. [Laying the Groundwork for Cloud](https://www.oreilly.com/library/view/laying-the-groundwork/9781492036029/) by Mark Preston (2018)
