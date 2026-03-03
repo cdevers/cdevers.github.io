@@ -26,6 +26,7 @@ Titles I’ve worked on include:
 1. [Learning Swift, 3rd Edition](https://www.oreilly.com/library/view/learning-swift-3rd/9781491987568/) by Jonathon Manning, Paris Buttfield-Addison, Tim Nugent (2019)
 1. [Modern Linux Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/) (2019)
    - This title evolved into [Modern System Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/) (2022), for which I contributed some of the material, including the chapter on Storage management.
+1. [Practical Artificial Intelligence with Swift](https://www.oreilly.com/library/view/practical-artificial-intelligence/9781492044802/part01.html) by Mars Geldard, Jonathon Manning, Paris Buttfield-Addison, Tim Nugent (2019)
 1. [Developing Open Cloud Native Microservices](https://www.oreilly.com/library/view/developing-open-cloud/9781492052753/) by Graham Charters, Sebastian Daschner, Pratik Patel, Steve Poole (2019)
 1. [Laying the Groundwork for Cloud](https://www.oreilly.com/library/view/laying-the-groundwork/9781492036029/) by Mark Preston (2018)
 1. [Puppet Best Practices](https://www.oreilly.com/library/view/puppet-best-practices/9781491922996/) by Chris Barbour, Jo Rhett (2018)
