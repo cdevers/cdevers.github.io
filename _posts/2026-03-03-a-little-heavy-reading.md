@@ -5,9 +5,9 @@ date: 2026-03-03
 tags: [books]
 ---
 
-Since 2003, I’ve had a freelance relationship with O’Reilly Media, offering technical review services on a series of AI, Cloud, DevOps, macOS / Mac OS X, iOS, and Linux reference books.
+Since 2003, I’ve had a freelance relationship with [O’Reilly Media](https://www.oreilly.com/about/), offering technical review services on a series of AI, Cloud, DevOps, macOS / Mac OS X, iOS, and Linux reference books.
 
-Additionally, I authored some of the material for “Modern System Administration” with Jennifer Davis, published in 2022.
+Additionally, I authored some of the material for “[Modern System Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/)” with Jennifer Davis, published in 2022.
 
 Titles I’ve worked on include:
 
