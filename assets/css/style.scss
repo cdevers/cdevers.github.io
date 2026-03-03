@@ -3,13 +3,56 @@
 
 @import "minima";
 
-/* Tighten up the nav spacing so § feels less necessary */
+/* ── Nav spacing (replaces the need for § separators) ── */
 .site-nav a {
-  margin-left: 1.5em;
+  margin-left: 1.2em;
 }
 
-/* Make the photo on the About page behave nicely */
-img {
+/* ── Blog index ── */
+.blog-index .post-summary {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.blog-index .post-summary:last-child {
+  border-bottom: none;
+}
+
+.post-meta {
+  font-size: 0.875em;
+  color: #828282;
+}
+
+.tag {
+  display: inline-block;
+  background: #f0f0f0;
+  border-radius: 3px;
+  padding: 0 0.4em;
+  font-size: 0.85em;
+  color: #555;
+}
+
+/* ── Tags page ── */
+.tags-page h2 {
+  margin-top: 2em;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 0.3em;
+}
+
+/* ── Photography page ── */
+.site-main img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin: 1.5em 0;
+}
+
+/* ── General ── */
+.site-main a {
+  text-decoration: none;
+}
+
+.site-main a:hover {
+  text-decoration: underline;
 }
