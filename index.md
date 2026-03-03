@@ -2,6 +2,6 @@
 layout: home
 ---
 
-Chris Devers, Boston-based technologist for hire.
+Chris Devers, Boston-based technologist.
 
 → [More about me](/about)
