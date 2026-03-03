@@ -16,6 +16,7 @@ header_pages:
   - _pages/about.md
   - _pages/books.md
   - _pages/photography.md
+  - _pages/projects.md
   - _pages/social.md
 
 # Minima theme skin options: classic (default), dark, auto, solarized
