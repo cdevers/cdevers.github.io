@@ -6,6 +6,8 @@ permalink: /about/
 
 Hi, I'm Chris Devers — a Boston-based technologist.
 
+![Photo of Chris Devers](/assets/images/cdevers_2026-01-01_prospect_hill_tower.jpg "Photo of Chris Devers")
+
 I’ve been a scrum master, a product owner, a writer & editor, a media production technical support engineer, a Mac Genius, and more. 
 
 In my spare time, my hobbies include music, travel, photography, history, and cooking. I enjoy finding communities of like-minded folks.
