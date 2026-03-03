@@ -1,0 +1,15 @@
+---
+---
+
+@import "minima";
+
+/* Tighten up the nav spacing so § feels less necessary */
+.site-nav a {
+  margin-left: 1.5em;
+}
+
+/* Make the photo on the About page behave nicely */
+img {
+  max-width: 100%;
+  height: auto;
+}
