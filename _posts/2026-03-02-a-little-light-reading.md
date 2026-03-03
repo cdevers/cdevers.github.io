@@ -5,7 +5,7 @@ date: 2026-03-02
 tags: [books]
 ---
 
-Libraries are a treasure, especially in the modern age when your library card lets you check out titles digitally. I do a lot of urban exploration, on foot or by bike, and I generally like to listen to audiobooks when I’m out & about. Here’s a sample of some of what I’ve read over the past few years:
+Libraries are a treasure, especially in the modern age when your library card lets you check out titles digitally. I do a lot of urban exploration, on foot or by bike, and I generally like to listen to audiobooks when I’m out & about. Here’s a sample of some of what I’ve read & listened to over the past few years:
 
 - [Consider Phlebas](https://share.libbyapp.com/title/605039%23library-minuteman-somerville) by Iain M. Banks (2026-03-02, Libby)
 - <u>From Russia With Love</u> by Ian Fleming (2026-02-13, Hoopla)
@@ -72,7 +72,6 @@ Libraries are a treasure, especially in the modern age when your library card le
 - <u>The Silmarillion</u> by J. R. R. Tolkien (2025-05-06, Hoopla)
 - <u>The Hobbit</u> by J. R. R. Tolkien (2025-04-26, Hoopla)
 - <u>The Return of the King</u> by J. R. R. Tolkien (2025-04-15, Hoopla)
-- [China Rich Girlfriend](https://share.libbyapp.com/title/1971037%23library-minuteman-somerville) by Kevin Kwan (2025-04-09, Libby)
 - <u>The Two Towers</u> by J. R. R. Tolkien (2025-04-05, Hoopla)
 - <u>The Fellowship of the Ring</u> by J. R. R. Tolkien (2025-03-24, Hoopla)
 - [Leviathan Wakes](https://share.libbyapp.com/title/3288774%23library-minuteman-somerville) by James S. A. Corey (2025-03-17, Libby)
