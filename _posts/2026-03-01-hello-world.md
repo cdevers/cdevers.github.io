@@ -3,7 +3,7 @@ layout: post
 title: "Welcome to The Party, Pal"
 date: 2026-03-01 20:00:00 -0500
 excerpt: Hi there! I'm Chris Devers — a Boston-based technologist.
-tags: [meta, blogging]
+tags: [meta]
 ---
 
 Hi there! I'm Chris Devers — a Boston-based technologist.
