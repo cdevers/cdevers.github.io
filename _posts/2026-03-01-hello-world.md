@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Welcome to The Party, Pal"
-date: 2026-03-02
+date: 2026-03-01
 tags: [meta, blogging]
 ---
 
