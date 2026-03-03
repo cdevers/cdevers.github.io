@@ -2,6 +2,7 @@
 layout: post
 title: "A Little Light Reading"
 date: 2026-03-02 20:00:00 -0500
+excerpt: Here’s a sample of some of what I’ve read & listened to over the past few years.
 tags: [books]
 ---
 

@@ -2,6 +2,7 @@
 layout: post
 title: "A Little Heavy Reading"
 date: 2026-03-03 10:00:00 -0500
+excerpt: I’m a freelance technical reviewer for O’Reilly Media. Here’s a list of the publications I’ve reviewed for them over the years.
 tags: [books]
 ---
 
