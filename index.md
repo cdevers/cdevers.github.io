@@ -2,6 +2,6 @@
 layout: home
 ---
 
-Tech person. Currently working on [whatever]. Writing here about [topics].
+Chris Devers, Boston-based technologist for hire.
 
 → [More about me](/about)
