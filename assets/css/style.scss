@@ -3,12 +3,19 @@
 
 @import "minima";
 
-/* ── Nav spacing (replaces the need for § separators) ── */
+/* ── Fix mobile header overlap ── */
+@media screen and (max-width: 600px) {
+  .site-header {
+    position: relative; /* un-sticks the header on mobile */
+  }
+}
+
+/* ── Nav spacing ── */
 .site-nav a {
   margin-left: 1.2em;
 }
 
-/* ── Blog index ── */
+/* ── Blog index post separation ── */
 .blog-index .post-summary {
   margin-bottom: 2em;
   padding-bottom: 2em;
@@ -19,28 +26,31 @@
   border-bottom: none;
 }
 
+/* ── Post meta (date, tags line) ── */
 .post-meta {
   font-size: 0.875em;
   color: #828282;
 }
 
+/* ── Tag pills ── */
 .tag {
   display: inline-block;
   background: #f0f0f0;
   border-radius: 3px;
-  padding: 0 0.4em;
+  padding: 0.1em 0.4em;
   font-size: 0.85em;
   color: #555;
+  margin-left: 0.2em;
 }
 
-/* ── Tags page ── */
+/* ── Tags page section headers ── */
 .tags-page h2 {
   margin-top: 2em;
   border-bottom: 1px solid #e8e8e8;
   padding-bottom: 0.3em;
 }
 
-/* ── Photography page ── */
+/* ── Images ── */
 .site-main img {
   max-width: 100%;
   height: auto;
@@ -48,7 +58,7 @@
   margin: 1.5em 0;
 }
 
-/* ── General ── */
+/* ── Links ── */
 .site-main a {
   text-decoration: none;
 }
