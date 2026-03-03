@@ -14,6 +14,7 @@ include:
 # Since we're overriding header.html, this is just for reference
 header_pages:
   - _pages/about.md
+  - _pages/blog.md
   - _pages/books.md
   - _pages/photography.md
   - _pages/projects.md

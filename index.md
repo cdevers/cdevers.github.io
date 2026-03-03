@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: page
 ---
 
 Chris Devers, Boston-based technologist.

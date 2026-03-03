@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Little Heavy Reading"
-date: 2026-03-03 14:00:00 -0500
+date: 2026-03-03 10:00:00 -0500
 tags: [books]
 ---
 
