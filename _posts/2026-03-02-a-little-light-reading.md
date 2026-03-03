@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Little Light Reading"
-date: 2026-03-02
+date: 2026-03-02 20:00:00 -0500
 tags: [books]
 ---
 
