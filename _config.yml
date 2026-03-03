@@ -1,6 +1,6 @@
 theme: minima
 title: Chris Devers
-description: Chris Devers, Boston-based technologist writing about tech, music, history, travel, literature, and more.
+description: Chris Devers, Boston-based technologist writing about tech, music, photography, history, travel, literature, and more.
 
 # Your name, used in the footer and optionally in the header
 author:
@@ -15,6 +15,7 @@ include:
 header_pages:
   - _pages/about.md
   - _pages/books.md
+  - _pages/photography.md
   - _pages/social.md
 
 # Minima theme skin options: classic (default), dark, auto, solarized
