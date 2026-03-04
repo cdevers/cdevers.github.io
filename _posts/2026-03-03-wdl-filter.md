@@ -24,7 +24,7 @@ I did, however, find it useful to play around with analyzing the letter frequenc
 
 Something like this:
 
-![Wordle letter frequencies by word position](/assets/images/wdl-filter_results.png "Wordle letter frequencies by word position")
+![Wordle letter frequencies by word position](/assets/images/wordle_letter_frequencies.png "Wordle letter frequencies by word position")
 
 This paints a different picture!
 
