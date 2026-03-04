@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "wdl-filter, a simple command line tool to help solve Wordle puzzles"
-date: 2026-03-04 02:00:00 -0500
+date: 2026-03-03 23:00:00 -0500
 excerpt: I have a little script to help me solve the day’s Wordle puzzle.
 tags: [programming]
 ---
