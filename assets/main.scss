@@ -67,3 +67,24 @@
 .site-main a:hover {
   text-decoration: underline;
 }
+
+/* -- image alignment -- */
+/* -- source: https://blog.markdowntools.com/posts/markdown-image-alignment-positioning-complete-guide -- */
+.center-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.float-left {
+  float: left;
+  margin: 0 20px 20px 0;
+  max-width: 300px;
+}
+
+.float-right {
+  float: right;
+  margin: 0 0 20px 20px;
+  max-width: 300px;
+}
+
