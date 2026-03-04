@@ -14,7 +14,7 @@ I have a little Python command line tool for helping solve the day’s NYT Wordl
 
 * [github.com/cdevers/wordle-filter](https://github.com/cdevers/wordle-filter)
 
-You can [read about it here](/2026/03/03/wdl-filter.html).
+You can [read about it here](/2026/03/04/wdl-filter.html).
 
 ## Non-Techie Stuff
 
