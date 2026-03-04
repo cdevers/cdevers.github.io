@@ -165,7 +165,7 @@ $
 
 This is the version I’ve been using for a couple weeks or so now. It’s working well enough that I figure I might as well post it publicly to GitHub, so here it is:
 
-* https://github.com/cdevers/wordle-filter
+* [github.com/cdevers/wordle-filter](https://github.com/cdevers/wordle-filter)
 
 Realistically, I don't expect this to be a runaway hit, so much as me publicly scratching a particular itch that maybe, just maybe, a small number of other folks might share, too. 
 
