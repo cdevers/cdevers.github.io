@@ -6,8 +6,6 @@ excerpt: I have a little script to help me solve the day’s Wordle puzzle.
 tags: [programming]
 ---
 
-# wdl-filter, a simple command line tool to help solve Wordle puzzles
-
 ![Wordle results](/assets/images/wdl-filter_results.png "Wordle results")
 
 Like a lot of people, I try to solve the New York Times-owned Wordle puzzle each day. 
