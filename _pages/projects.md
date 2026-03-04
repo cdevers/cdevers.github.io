@@ -12,7 +12,7 @@ Any self-respecting nerd will generally have half a dozen or so personal project
 
 I have a little Python command line tool for helping solve the day’s NYT Wordle puzzle. 
 
-* https://github.com/cdevers/wordle-filter
+* [github.com/cdevers/wordle-filter](https://github.com/cdevers/wordle-filter)
 
 You can [read about it here](/2026/03/03/wdl-filter.html).
 
