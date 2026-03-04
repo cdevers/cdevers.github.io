@@ -8,7 +8,7 @@ Since 2003, I’ve had a freelance relationship with [O’Reilly Media](https://
 
 Additionally, I authored some of the material for “[Modern System Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/)” with Jennifer Davis, published in 2022.
 
-Titles I’ve worked on include:
+Titles I’ve worked on for O’Reilly include:
 
 1. [Java in a Nutshell, 9th edition](https://www.oreilly.com/library/view/java-in-a/0642572255992/) by Benjamin J. Evans, Jason R. Clark, David Flanagan (2026) 
 1. [Delightful Intelligence](https://www.oreilly.com/library/view/delightful-intelligence/9781098180829/) by Ramli John, C. Todd Lombardo and Michael Connors (2026) 
@@ -49,3 +49,4 @@ Titles I’ve worked on include:
 1. [Learning Perl Objects, References, and Modules](https://www.oreilly.com/library/view/learning-perl-objects/0596004788/) by Randal L. Schwartz, Tom Phoenix (2003)
 1. [Perl Template Toolkit](https://www.oreilly.com/library/view/perl-template-toolkit/0596004761/) by Darren Chamberlain, Andy Wardley, David Cross (2003)
 
+In addition, I was the assistant editor for the 2003 edition of the [Using GCC](https://www.betterworldbooks.com/product/detail/using-gcc-for-gcc-version-3-3-1-the-gnu-compiler-collection-reference-manual-9781882114399) manual for [GNU Press](https://www.fsf.org/campaigns/gnu-press) and the [Free Software Foundation](https://www.fsf.org/about/), authored by Richard Stallman and the GCC Developer Community. 

@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hi, I'm Chris Devers — a Boston-based technologist.
+Hello! I’m Chris Devers, a Boston-based, Emmy-award winning technologist. 
 
 ![Photo of Chris Devers](/assets/images/cdevers_2026-01-01_prospect_hill_tower.jpg "Photo of Chris Devers")
 
