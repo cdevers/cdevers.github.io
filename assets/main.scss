@@ -3,6 +3,29 @@
 
 @import "minima";
 
+/* -- add a dark mode toggle -- */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+  }
+  .site-header, .site-footer {
+    background-color: #1a1a1a;
+    border-color: #444;
+  }
+  a { color: #7ab3f5; }
+  a:visited { color: #9d8ff5; }
+  .post-meta { color: #aaa; }
+  .post-meta span.tag {
+    background: #2a2a2a;
+    border-color: #555;
+    color: #ccc;
+  }
+  .blog-index .post-summary {
+    border-bottom-color: #333;
+  }
+}
+
 /* ── Fix mobile header overlap ── */
 @media screen and (max-width: 600px) {
   .site-header {
