@@ -88,3 +88,20 @@
   max-width: 300px;
 }
 
+/* ── Image captions ── */
+figure.post-image {
+  margin: 1.5em 0;
+}
+
+figure.post-image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figure.post-image figcaption {
+  font-size: 0.85em;
+  color: #828282;
+  margin-top: 0.4em;
+  font-style: italic;
+}

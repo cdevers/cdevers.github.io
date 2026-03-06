@@ -1,0 +1,10 @@
+<figure class="post-image">  
+  <img src="{{ include.path | relative_url }}" 
+       alt="{{ include.alt }}"
+       loading="lazy"
+       {% if include.width %}width="{{ include.width }}"{% endif %} 
+       {% if include.height %}height="{{ include.height }}"{% endif %}>  
+  {% if include.caption %}  
+    <figcaption>{{ include.caption }}</figcaption>  
+  {% endif %}  
+</figure>
