@@ -9,7 +9,7 @@ Hello! I’m Chris Devers, a Boston-based, Emmy-award winning technologist.
 {% include image.html 
    path="/assets/images/cdevers_2026-01-01_prospect_hill_tower.jpg" 
    alt="Photo of Chris Devers at Prospect Hill Tower, Somerville." 
-   caption="Here’s me atop Prospect Hill Tower, Somerville MA, on the 250th anniversary of when George Washington raised the first American flag, the Grand Union Flag, on January 1, 1776, at this very spot." %}
+   caption="Here’s me atop Prospect Hill Tower, Somerville MA, on <a href='https://www.youtube.com/watch?v=YHfI_I7AMTc'>the 250th anniversary of when George Washington raised the first American flag</a>, the <a href='https://en.wikipedia.org/wiki/Continental_Union_Flag'>Grand Union Flag</a>, on January 1, 1776, at this very spot." %}
 
 I’ve been a scrum master, a product owner, a writer & editor, a media production technical support engineer, a Mac Genius, and more. 
 
