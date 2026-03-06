@@ -4,6 +4,11 @@ title: Photography
 permalink: /photography/
 ---
 
+{% include image.html 
+   path="/assets/images/cdevers_2019-12-02_tokyo_teamlab_borderless.jpeg" 
+   alt="Well we know where we're goin' but we don't know where we've been.  And we know what we're knowing' but we can't say what we've seen.  And we're not little children and we know what we want.  And the future is certain give us time to work it out." 
+   caption="Here’s me taking a perfectly ordinary selfie at <a href='https://www.teamlab.art/e/borderless-odaiba/'>TeamLab Borderless Odaiba</a>, Tokyo." %}
+
 I’m a published photographer. Some of the places my photos have shown up:
 
 - A [photo I took at MIT](https://www.flickr.com/photos/cdevers/5702488800/in/photolist-9FUKfq-9FRu7x-7S335j-9FUEcQ-9FVi9m-9FRnEx-9FUu6f-9FSnS4-9FUyGh-9FUAfj-9FV3G7-9FRxZc-9FUk5h-7RSUDv-9FUGfo-7MNzCE-9FUvbf-9FRR2P-7RUxct-9FUoDb-9FRshg-7RUwtv-bAiZef-7RXLgA-7RUx5V) ended up in a montage in [Apple’s October 2018 keynote event](https://www.youtube.com/watch?v=bfHEnw6Rm-4), as part of a commercial showing people using Macs. [My photo appeared](https://youtu.be/bfHEnw6Rm-4?si=yJ7ZuosR14IewtVw&t=310) between JJ Abrams (Star Wars & Star Trek!) and Paul McCartney (the Beatles!).  <a data-flickr-embed="true" data-header="true" data-footer="true" href="https://www.flickr.com/photos/cdevers/5702488800/in/photolist-9FUKfq-9FRu7x-7S335j-9FUEcQ-9FVi9m-9FRnEx-9FUu6f-9FSnS4-9FUyGh-9FUAfj-9FV3G7-9FRxZc-9FUk5h-7RSUDv-9FUGfo-7MNzCE-9FUvbf-9FRR2P-7RUxct-9FUoDb-9FRshg-7RUwtv-bAiZef-7RXLgA-7RUx5V" title="MIT+150: FAST (Festival of Art + Science + Technology): FAST LIGHT — Man studying alone on his Macbook at the library"><img src="https://live.staticflickr.com/3530/5702488800_dc4b9f9865_b.jpg" width="1024" height="678" alt="MIT+150: FAST (Festival of Art + Science + Technology): FAST LIGHT — Man studying alone on his Macbook at the library"/></a><script async src="//embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>
