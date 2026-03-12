@@ -24,7 +24,7 @@ So I have a flash, I just don't use it very often, and because I don't use it ve
 
 But I do need to use it sometimes.
 
-Late last year, I was trying to get a family photo for the ol’ holidy card, so I took out the camera, the tripod, the flash, and started setting things up. 
+Late last year, I was trying to get a family photo for the ol’ holiday card, so I took out the camera, the tripod, the flash, and started setting things up. 
 
 The flash wasn't working. 
 
