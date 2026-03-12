@@ -54,6 +54,6 @@ Never in a million years would it have occurred to me that these settings would 
 
 Claude, which I had never talked to about photography before this, figured it out within 13 minutes. 
 
-Will [Claude save every one of us](https://genius.com/Queen-flashs-theme-lyrics)? Aah-aah, maybe not. But it saved the day that day!
+Will [Claude save every one of us](https://genius.com/Queen-flashs-theme-lyrics)? Aah-aah …maybe not. But it saved the day that day!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/LfmrHTdXgK4?si=syokXLxDNxOADSSe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
