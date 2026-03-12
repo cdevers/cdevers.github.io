@@ -36,7 +36,7 @@ I did the unthinkable: I started reading the manual. Alas, it is a hundred pages
 
 Remembering modernity, I tried searching the internet. Nikon’s website. StackExchange. Reddit posts. None of the search results were getting me anywhere.
 
-In desperation, I noticed the Claude AI icon on the Dock. What the heck? It's worth a try. I took a photo of the back of the camera + flash, showing that everything was “working”, but explained that the flash wasn't firing when I try to take a photo. 
+In desperation, I noticed the Claude AI icon on the Dock. What the heck? It's worth a try. I took a photo of the back of the camera + flash and uploaded it to Claude, showing that everything was “working”, but explained that the flash wasn't firing when I try to take a photo. 
 
 Like any good tier one tech support agent, Claude had me review the basics. Make sure the hot shoe mount point is clean & the connection is secure. Review the camera mode settings. Review the camera’s flash control settings. Make sure the firmware is up to date. Try other modes. I’d tried most of this already, but in the spirit of [rubber duck debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging), it was good to make sure that the basics had been checked.
 
