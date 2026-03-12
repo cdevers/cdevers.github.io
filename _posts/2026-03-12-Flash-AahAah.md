@@ -18,7 +18,7 @@ You know how lots of photos with cheap point-n-shoot cameras give people spooky 
 
 I digress. TLDR for the most part I’d rather take photos with no flash than to use the flash built in with the camera.
 
-_Sometimes_, having flash is good. A good quiality external flash produces a lot more light than a built-in flash ever could, and can make nighttime seem like daytime. And you can play around with this, by making the flash bounce off the ceiling for more naturalistic shadows, or off the wall — consider for example the cover photo for [“With The Beatles”](https://en.wikipedia.org/wiki/With_the_Beatles), where half the faces are clearly lit, and half are in deep shadow. That’s a neat trick, and can be fun to replicate. 
+_Sometimes_, having flash is good. A good quiality external flash produces a lot more light than a built-in flash ever could, and can make nighttime seem like daytime. And you can play around with this, by making the flash bounce off the ceiling for more naturalistic shadows. Or, with an aimable flash, you can do things like bounce the light off the wall — consider for example the cover photo for [“With The Beatles”](https://en.wikipedia.org/wiki/With_the_Beatles), where half the faces are clearly lit, and half are in deep shadow. That’s a neat trick, and can be fun to replicate. 
 
 So I have a flash, I just don't use it very often, and because I don't use it very often, I always seem to forget that the thing has a gazillion controls on it that 98% of the time I just leave at the defaults because I can't be bothered to read the manual.
 
