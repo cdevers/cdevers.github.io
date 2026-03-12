@@ -2,7 +2,7 @@
 layout: post
 title: "Flash! Aah-aah!" 
 date: 2026-03-12 13:36:22 -0400
-excerpt: 
+excerpt: I couldn’t understand why the flash wasn't working with my camera. Claude figured it out in 13 minutes.
 tags: [photography, ai]
 ---
 
