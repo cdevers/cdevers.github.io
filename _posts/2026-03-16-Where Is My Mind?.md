@@ -92,7 +92,7 @@ The one multi-act arena festival I’ve been to in recent years was the [Outlaw 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250802_bob_dylan_at_outlaw_music_festival.jpg" alt="Bob Dylan at Outlaw Music Festival 2025, not Willie Nelson" caption="Bob Dylan at Outlaw Music Festival 2025, not Willie Nelson" %}
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250802_wilco_at_outlaw_music_festival.jpg" alt="Wilco at Outlaw Music Festival 2025, not Willie Nelson" caption="Wilco at Outlaw Music Festival 2025, not Willie Nelson" %}
 
-(The _main_ annual music festivals I go to are [Honk](https://honkfest.org) and [Somerville Porchfest](https://somerville.porchfest.info), but I’m not even going to try to set expectations on that one — those days involve seeing dozens of musicians, and basically _all_ of the tags in Photos end up being wrong.)
+(The _main_ annual music festivals I go to are [Honk](https://honkfest.org) and [Somerville Porchfest](https://somerville.porchfest.info), but I’m not even going to try to set expectations on those ones — those days involve seeing dozens of musicians, and basically _all_ of the tags in Photos end up being wrong.)
 
 ## Conflating a show with an unrelated one at a nearby venue
 
