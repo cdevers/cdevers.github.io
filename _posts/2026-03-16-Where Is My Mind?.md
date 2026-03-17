@@ -75,7 +75,7 @@ Similarly, Apple Photos got confused when J Robbins (with the J Robbins Band) op
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250502_j_robbins_bob_mould.jpg" alt="J Robbins Band, opening for Bob Mould Band" caption="J Robbins Band, opening for Bob Mould Band" %}
 
-In this example, we have a three-band lineup, with Aaro and the Lord opening for Eldridge Rodriguez, who opened for Hallelujah the Hills, the headliner. This one is just linked to “Aaron”, no surname, just “Aaron”.
+In this example, we have a three-band lineup, with Aaron and the Lord opening for Eldridge Rodriguez, who opened for Hallelujah the Hills, the headliner. This one is just linked to “Aaron”, no surname, just “Aaron”.
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20231216_hallelujah_the_hills.jpg" alt="poster for Hallelujah the Hills, with Eldridge Rodriguez & Aaron and the Lord" caption="poster for Hallelujah the Hills, with Eldridge Rodriguez & Aaron and the Lord" %}
 
