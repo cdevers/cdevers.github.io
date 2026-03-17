@@ -98,7 +98,7 @@ The one multi-act arena festival I’ve been to in recent years was the [Outlaw 
 
 Another common source of errors is when you attend a show in an area where there’s other events going on nearby. In this case, if the other event is at a larger venue, Photos will _usually_ assume that you were at the big stadium show, not the smaller venue show around the corner.
 
-Flagship example — and, yes, it’s a Pixies show again: they played at MGM Music Hall, which is physically-adjacent to Fenway Park, which had a Lumineers concert that night. I was not at the Lumineers concert, but Photos doesn't believe me.
+Flagship example — and, yes, it’s a Pixies show again: they played at MGM Music Hall, which is physically-adjacent to Fenway Park, which had a Lumineers concert that night. I was not at the Lumineers concert, but Photos doesn't believe me, even though I’ve explicitly added the correct show info to the captions, and put the photos in a named album.
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250718_pixies_mgm.jpg" alt="Pixies at MGM, not Lumineers at Fenway Park" caption="Pixies at MGM, not Lumineers at Fenway Park" %}
 
