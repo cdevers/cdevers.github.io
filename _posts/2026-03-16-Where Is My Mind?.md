@@ -71,7 +71,7 @@ The next three are similar: Battles opened for Mr Bungle, Pile opened for the Je
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20241213_jesus_lizard_pile.jpg" alt="merch table for the Jesus Lizard, for whom Pile opened" caption="merch table for the Jesus Lizard, for whom Pile opened" %}
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250730_tv_on_the_radio_model_actriz.jpg" alt="TV On The Radio, with Model/Actriz opening" caption="TV On The Radio, with Model/Actriz opening" %}
 
-Similarly, Apple Photos got confused when J Robbins (with the J Robbins Band) opened for Bob Mould (with the Bob Mould Band):
+Similarly, Apple Photos got confused when J Robbins (with the [J Robbins Band](https://www.youtube.com/watch?v=XeRZy6NMEog)) opened for Bob Mould (with the [Bob Mould Band](https://www.youtube.com/watch?v=B57dTH_fb88)):
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250502_j_robbins_bob_mould.jpg" alt="J Robbins Band, opening for Bob Mould Band" caption="J Robbins Band, opening for Bob Mould Band" %}
 
@@ -79,7 +79,7 @@ In this example, we have a three-band lineup, with Aaron and the Lord opening fo
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20231216_hallelujah_the_hills.jpg" alt="poster for Hallelujah the Hills, with Eldridge Rodriguez & Aaron and the Lord" caption="poster for Hallelujah the Hills, with Eldridge Rodriguez & Aaron and the Lord" %}
 
-This one is _maybe_ a little easier to understand? Maybe? [Michael Shannon](https://michaelshannontour.com) & [Jason Narducy](https://jasonnarducytour.com) have, along with some of their other musician friends, been doing annual tours that pay tribute to early R.E.M. albums: “Murmur” in 2024, “Reconstruction of the Fables” in 2025, and now “Life’s Rich Pageant” in 2026. They’re really good — REM themselves have shown up at some of the shows! In any case, this show has been touring with stand up comedians as the opening acts. The night I saw it, Bobcat Goldthwait started things off, then Eugene Mirman took the stage, before the REM lovefest began in earnest. Naturally then, Photos thinks the whole thing was a Eugene Mirman show.
+This one is _maybe_ a little easier to understand? Maybe? [Michael Shannon](https://michaelshannontour.com) & [Jason Narducy](https://jasonnarducytour.com) have, along with some of their other musician friends, been doing annual tours that pay tribute to early R.E.M. albums: “Murmur” in 2024, “Reconstruction of the Fables” in 2025, and now “Life’s Rich Pageant” in 2026. They’re [really good](https://www.youtube.com/watch?v=6IqmLEMEh4w) — REM themselves have shown up at some of the shows! In any case, this show has been touring with stand up comedians as the opening acts. The night I saw it, Bobcat Goldthwait started things off, then Eugene Mirman took the stage, before the REM lovefest began in earnest. Naturally then, Photos thinks the whole thing was a Eugene Mirman show.
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20260306_michael_shannon_jason_narducy_eugene_mirman.jpg" alt="Michael Shannon, Jason Narducy & friends R.E.M. tribute show, with comedians Eugene Mirman & Bobcat Goldthwait opening" caption="Michael Shannon, Jason Narducy & friends R.E.M. tribute show, with comedians Eugene Mirman & Bobcat Goldthwait opening" %}
 
@@ -89,8 +89,8 @@ Of course, if shows with three or more performers are a problem, then it gets ev
 
 The one multi-act arena festival I’ve been to in recent years was the [Outlaw Music Festival](https://blackbirdpresents.com/concert/outlaw-music-festival-tour-2025/), and the main reason to be there was a bucket-list chance to see the _92 year old_ Willie Nelson; everything else was gravy. Apple Photos appears to agree, as all the photos that day are just tagged “Willie Nelson”, paying no attention to Bob Dylan, Wilco, or the others that were there that day.
 
-{% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250802_bob_dylan_at_outlaw_music_festival.jpg" alt="Bob Dylan at Outlaw Music Festival 2025, not Willie Nelson" caption="Bob Dylan at Outlaw Music Festival 2025, not Willie Nelson" %}
-{% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250802_wilco_at_outlaw_music_festival.jpg" alt="Wilco at Outlaw Music Festival 2025, not Willie Nelson" caption="Wilco at Outlaw Music Festival 2025, not Willie Nelson" %}
+{% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250802_bob_dylan_at_outlaw_music_festival.jpg" alt="Bob Dylan at Outlaw Music Festival 2025, not Willie Nelson" caption="[Bob Dylan at Outlaw Music Festival 2025](https://www.youtube.com/watch?v=eVuqCw4fiuY), not Willie Nelson" %}
+{% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250802_wilco_at_outlaw_music_festival.jpg" alt="Wilco at Outlaw Music Festival 2025, not Willie Nelson" caption="[Wilco at Outlaw Music Festival 2025](https://www.youtube.com/watch?v=XeRZy6NMEog), not Willie Nelson" %}
 
 (The _main_ annual music festivals I go to are [Honk](https://honkfest.org) and [Somerville Porchfest](https://somerville.porchfest.info), but I’m not even going to try to set expectations on those ones — those days involve seeing dozens of musicians, and basically _all_ of the tags in Photos end up being wrong.)
 
@@ -126,7 +126,7 @@ In the Boston area, the best such example is probably Cambridge’s venerable Mi
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250119_cracker.jpg" alt="Cracker at the Middle East Downstairs" caption="Cracker at the Middle East Downstairs" %}
 
-In a more recent example, the [Jeff Conolly cancer battle of the bands benefit show](https://www.ticketweb.com/event/jeffrey-conolly-cancer-battle-of-middle-east-downstairs-tickets/14739173?) ([Facebook event](https://www.facebook.com/events/1743507947033844/)) featured half a dozen bands, among them most notably was [Mission of Burma](https://missionofburmamusic.bandcamp.com), the best darned rock band to ever come out of the city of Boston, among other friends & family of [Jeff Conolly of the Lyres](https://en.wikipedia.org/wiki/Lyres_%28band%29). Apple Photos, of course, is unmoved — it tagged all the photos as “Gut Health Concert”, whoever that is.
+In a more recent example, the [Jeff Conolly cancer battle of the bands benefit show](https://www.ticketweb.com/event/jeffrey-conolly-cancer-battle-of-middle-east-downstairs-tickets/14739173?) ([Facebook event](https://www.facebook.com/events/1743507947033844/)) featured half a dozen bands, among them most notably was [Mission of Burma](https://missionofburmamusic.bandcamp.com), [the best darned rock band to ever come out of the city of Boston](https://www.youtube.com/watch?v=6WWxLOQg4J8), among other friends & family of [Jeff Conolly of the Lyres](https://en.wikipedia.org/wiki/Lyres_%28band%29). Apple Photos, of course, is unmoved — it tagged all the photos as “Gut Health Concert”, whoever that is.
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20260312_mission_of_burma.jpg" alt="Mission of Burma at the Jeff Conolly cancer benefit at the Middle East Downstairs" caption="Mission of Burma at the Jeff Conolly cancer benefit at the Middle East Downstairs" %}
 
