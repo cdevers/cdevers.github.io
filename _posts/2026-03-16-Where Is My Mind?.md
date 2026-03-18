@@ -171,3 +171,9 @@ If we could edit the concert event tags, we could fix the problem ourselves. Ala
 Short of that, we’ll just have to put on our helmets & Devo energy domes, and scream into the void — or at least glare menacingly at Tyler Morris, whoever that is. 
 
 {% include image.html path="/assets/images/blog/2026-03-16/where-is-my-mind-20250509_devo_poster.jpg" alt="Devo @ MGM; none of us know who Tyler Morris is" caption="Devo @ MGM; none of us know who Tyler Morris is" %}
+
+---
+
+Versions of this article were cross-posted to [LinkedIn](https://www.linkedin.com/feed/update/urn:li:activity:7439553884970356736/) and [r/ApplePhotos on Reddit](https://old.reddit.com/r/ApplePhotos/comments/1rvyd8l/apple_photos_has_a_neat_new_feature_to/). If you’ve seen this problem as well, feel free to join the discussions — or better still, file your own bug reports with Apple to improve the chances that this will get fixed eventually.
+
+Fellow Somervillian [Dan Moren](https://sixcolors.com/dan/) was kind enough to [write up the story for Apple news site Six Colors](https://sixcolors.com/link/2026/03/apple-photoss-concert-identification-seems-to-play-more-misses-than-hits/) — thanks, Dan!
