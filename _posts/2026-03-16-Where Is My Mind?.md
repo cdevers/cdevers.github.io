@@ -47,7 +47,7 @@ The problem, see, was that Fogerty was the lead singer & songwriter for Creedenc
 
 But I digress. 
 
-In 2023, half a century after Creedence broke up, he got the rights to his songs back, and went out on tour to play them. (And it was great!)
+In 2023, half a century after Creedence broke up, he got the rights to his songs back, and went out on tour to play them. (And [it was great](https://www.youtube.com/watch?v=VUPRgkSrdZs)!)
 
 So… when Apple Photos tagged the photos of the John Fogerty concert as “Creedence Clearwater Revival”, that’s …almost right? Kind of? To be sure, it’s right enough that, as this example shows, he put the CCR logo up on the big screen behind the stage. But that name has been defunct as a band for fifty years now, and really, these photos should be marked as a “John Fogerty” show, not Creedence Clearwater Revival.
 
