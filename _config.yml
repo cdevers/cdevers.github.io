@@ -23,3 +23,9 @@ header_pages:
 # Minima theme skin options: classic (default), dark, auto, solarized
 minima:
   skin: auto   # auto = respects visitor's OS dark/light preference
+  social_links:
+    - { platform: bluesky, user_url: "https://bsky.app/profile/cdevers" }
+    - { platform: linkedin, user_url: "https://www.linkedin.com/in/chrisdevers/" }
+    - { platform: mastodon, user_url: "https://mastodon.social/@cdevers" }
+
+    
