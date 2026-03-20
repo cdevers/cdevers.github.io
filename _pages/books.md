@@ -10,7 +10,7 @@ Additionally, I authored some of the material for “[Modern System Administrati
 
 The titles I’ve worked on are listed below. Except as noted, all of these have been for O’Reilly Media:
 
-1. <u>Building the Next Generation of AI Infrastructure</u> by [Adrian Gonzalez Sanchez](https://www.oreilly.com/search/?q=author%3A%22Adrián%20González%20Sánchez%22&order_by=relevance&rows=100) (2026)
+1. <u>Building the Next Generation of AI Infrastructure</u> by [Adrián González Sánchez](https://www.oreilly.com/search/?q=author%3A%22Adrián%20González%20Sánchez%22&order_by=relevance&rows=100) (2026)
 1. [Java in a Nutshell, 9th edition](https://www.oreilly.com/library/view/java-in-a/0642572255992/) by Benjamin J. Evans, Jason R. Clark, David Flanagan (2026) 
 1. [Delightful Intelligence](https://www.oreilly.com/library/view/delightful-intelligence/9781098180829/) by Ramli John, C. Todd Lombardo and Michael Connors (2026) 
 1. [An Illustrated Guide to AI Agents](https://www.oreilly.com/library/view/an-illustrated-guide/9798341662681/) by Maarten Grootendorst, Jay Alammar (2026)
