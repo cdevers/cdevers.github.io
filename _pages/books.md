@@ -46,7 +46,7 @@ The titles I’ve worked on are listed below. Except as noted, all of these have
 1. [Swift Development with Cocoa](https://www.oreilly.com/library/view/swift-development-with/9781491909683/) by Paris Buttfield-Addison, Jonathon Manning, Tim Nugent (2014)
 1. [Learning iOS Programming, 3rd Edition](https://www.oreilly.com/library/view/learning-ios-programming/9781449359331/) by Alasdair Allan (2014)
 1. [Learning iOS Storyboard Programming](https://www.amazon.com/Learning-Ios-Storyboard-Wei-meng-Lee/dp/1449356176) by Wei Meng Lee (2013)
-1. <u>Objective-C Pocket Reference, 2nd Edition</u> (2012) [cancelled update to [Objective-C Pocket Reference](https://www.oreilly.com/library/view/objective-c-pocket-reference/0596004230/) by Andrew Duncan, 2002)
+1. <u>Objective-C Pocket Reference, 2nd Edition</u> (2012) [cancelled update to [Objective-C Pocket Reference](https://www.oreilly.com/library/view/objective-c-pocket-reference/0596004230/) by Andrew Duncan, 2002]
 1. [iOS 6 Programming Cookbook](https://www.oreilly.com/library/view/ios-6-programming/9781449342746/) by Vandad Nahavandipoor (2012)
 1. [Learning Cocoa with Objective-C, 3rd Edition](https://www.oreilly.com/library/view/learning-cocoa-with/9781449355432/) by Paris Buttfield-Addison, Jonathon Manning (2012)
 1. [Ubuntu For Non-Geeks, 3rd Edition](https://www.oreilly.com/library/view/ubuntu-for-non-geeks/9781593271800/) (No Starch Press) by Rickford Grant (2008)
