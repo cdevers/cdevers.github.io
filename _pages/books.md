@@ -4,6 +4,13 @@ title: Books
 permalink: /books/
 ---
 
+{% include image.html 
+   path="/assets/images/books_reviewed.jpg" 
+   alt="Some of the books I’ve done pre-publication tech reviews of for O’Reilly Media, and for the Free Software Foundation (FSF) / GNU Press" 
+   caption="Some of the books I’ve provided pre-publication tech reviews of for O’Reilly Media, and for the Free Software Foundation (FSF) / GNU press, starting with <u>Perl Template Toolkit</i>, <u>Perl Best Practices</u>, and <u>Using GCC</u>, up through <u>Terraform Cookbook</u>, <u>Infrastructure as Code</u>, <u>Responsible Software Engineering</u>, and <u>Modern System Administration</u>, for which I contributed portions of the text itself."
+   width="600" %}
+
+
 Since 2003, I’ve had a freelance relationship with [O’Reilly Media](https://www.oreilly.com/about/), offering technical review services on a series of AI, Cloud, DevOps, macOS / Mac OS X, iOS, and Linux reference books.
 
 Additionally, I authored some of the material for “[Modern System Administration](https://www.oreilly.com/library/view/modern-system-administration/9781492055204/)” with Jennifer Davis, published in 2022.
