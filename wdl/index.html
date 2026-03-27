@@ -222,6 +222,21 @@
     }
     .btn-sm:active { color: var(--text); }
 
+    /* ---- UNDO BUTTON (last guess row only) ---- */
+    .undo-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      line-height: 1;
+      padding: 4px 2px;
+      opacity: 0.35;
+      transition: opacity 0.15s;
+      -webkit-tap-highlight-color: transparent;
+      flex-shrink: 0;
+    }
+    .undo-btn:hover, .undo-btn:active { opacity: 0.9; }
+
     /* ---- GUESS HISTORY ---- */
     #guesses-section { margin-bottom: 14px; }
     .guess-row {
@@ -731,6 +746,20 @@ function renderGuesses() {
     countEl.innerHTML = `<strong>${count.toLocaleString()}</strong>`;
 
     row.append(wordEl, tilesEl, countEl);
+
+    // Undo button only on the last guess
+    if (i === guesses.length - 1) {
+      const undoBtn = document.createElement('button');
+      undoBtn.className = 'undo-btn';
+      undoBtn.textContent = '🗑️';
+      undoBtn.setAttribute('aria-label', 'Remove last guess');
+      undoBtn.addEventListener('click', () => {
+        guesses.pop();
+        renderAll();
+      });
+      row.appendChild(undoBtn);
+    }
+
     list.appendChild(row);
   });
 }
@@ -881,3 +910,4 @@ loadData();
 </script>
 </body>
 </html>
+
