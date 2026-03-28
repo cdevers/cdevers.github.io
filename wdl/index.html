@@ -324,11 +324,16 @@
       padding: 9px 12px;
       border-radius: 9px;
       background: var(--surface);
+      cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
+      transition: background 0.1s;
     }
+    .word-item:active { background: var(--surface2); }
     .word-item.top-item {
       background: var(--surface2);
       border: 1px solid var(--border);
     }
+    .word-item.top-item:active { background: var(--border); }
     .word-rank {
       font-family: 'IBM Plex Mono', monospace;
       font-size: 11px;
@@ -677,8 +682,20 @@ function computeResults(words) {
 }
 
 // ─────────────────────────────────────────────
-// RENDER
+// FILL WORD FROM RESULTS LIST
 // ─────────────────────────────────────────────
+function fillWord(word) {
+  currentWord = word;
+  tileStates  = ['_','_','_','_','_'];
+  const inp = document.getElementById('word-input');
+  inp.value = word;
+  renderTiles();
+  // Scroll input into view on mobile
+  inp.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  inp.focus();
+}
+
+
 function renderAll() {
   renderTiles();
   renderGuesses();
@@ -770,7 +787,7 @@ function renderResults() {
   if (guesses.length === 0) {
     section.innerHTML = `
       <div class="empty-state">
-        <p>Type a word, tap the tiles to set each letter's result,<br>then press <strong>Add guess</strong>.</p>
+        <p>Type a word, tap the tiles to set each letter's result,<br>then press <strong>Add guess</strong>.<br><br>Tap any word in the results list to fill it in automatically.</p>
       </div>`;
     return;
   }
@@ -819,6 +836,7 @@ function renderResults() {
           ? '<span class="no-data">no data</span>'
           : freq.toFixed(4)}</div>
       </div>`;
+    item.addEventListener('click', () => fillWord(word));
     listEl.appendChild(item);
   });
 
@@ -910,4 +928,3 @@ loadData();
 </script>
 </body>
 </html>
-
