@@ -55,11 +55,11 @@ And there it is: managing one instance of the library is a chore, but managing t
    caption="Blue Pearmain, home page" 
    width="700" %}
 
-My experiment with this is Blue Pearmain,[^1] or BP, a newly open sourced framework for harmonizing metadata between Apple Photos and a Flickr Pro account. 
+My experiment with this is [Blue Pearmain](https://github.com/cdevers/Blue-Pearmain),[^1] or BP, a newly open sourced framework for harmonizing metadata between Apple Photos and a Flickr Pro account. 
 
 First & foremost, BP is an experiment in solving a particular itch that has been bugging me for years, but not to the point that I was motivated enough to actually do anything about it. I have a mishmash of albums in Apple Photos, and photosets in Flickr; I have photos on Flickr with titles & descriptions & tags, while most of the library in Apple Photos lacks such metadata. Apple has built machine-learning capabilities into Photos so that the software can identify faces & other attributes of the images.[^2] With BP, I have a tool that is scanning both libraries, cataloging what it finds in a local database, and providing me with a way to harmonize & update the metadata in both libraries.
 
-{% include carousel.html images=page.carousel_images label="Blue Pearmain web UI screenshots" %}
+{% include carousel.html images=page.carousel_images label="<a href='https://github.com/cdevers/Blue-Pearmain'>Blue Pearmain</a> web UI screenshots" %}
 
 BP is also an experiment in trying to bring some software engineering discipline to “vibe coding” a moderately complex project. “Vibe coding”, of course, has become notorious for producing unmaintainable “slop” software.  Recently, I’ve been defending against such problems by using [Jesse Vincent’s “Superpowers” plugin for Claude](https://blog.fsck.com/2025/10/09/superpowers/) to help ensure that best practices are being followed, but even before adding that tool to the mix, I was already making sure that the project was documented, code-reviewed, tested, and has a development roadmap laying out upcoming changes.
 
@@ -75,7 +75,7 @@ And that’s what matters, right? These new AI agents can help us scratch these 
    caption="Vivian Maier, bicycle rider" 
    width="700" %}
 
-[^1]: Why the heck is it called “Blue Pearmain”? The project is named for the [Blue Pearmain apple](https://en.wikipedia.org/wiki/Blue_Pearmain), an American variety mentioned by Henry David Thoreau in his 1862 essay [Wild Apples](https://www.gutenberg.org/cache/epub/4066/pg4066.txt). Why? Three reasons. First off, like [McIntosh](https://www.macworld.com/article/669214/how-the-macintosh-got-its-name.html), it’s a variety of apple, so it alludes to the company. But apples are commonly thought of as being red, or maybe yellow or green, so I liked that this variety of apples is “blue”, harkening to the colors of the [Flickr logo](https://www.flickrhelp.com/hc/en-us/articles/4404071066260-Brand-guidelines). Plus, it’s a meta-allusion to the proud literary & artistic history of Massachusetts. Yes, the name is a mouthful (ahem), so feel free to just call it “BP” if you prefer. 
+[^1]: Why the heck is it called “Blue Pearmain”? The [project](https://github.com/cdevers/Blue-Pearmain) is named for the [Blue Pearmain apple](https://en.wikipedia.org/wiki/Blue_Pearmain), an American variety mentioned by Henry David Thoreau in his 1862 essay [Wild Apples](https://www.gutenberg.org/cache/epub/4066/pg4066.txt). Why? Three reasons. First off, like [McIntosh](https://www.macworld.com/article/669214/how-the-macintosh-got-its-name.html), it’s a variety of apple, so it alludes to the company. But apples are commonly thought of as being red, or maybe yellow or green, so I liked that this variety of apples is “blue”, harkening to the colors of the [Flickr logo](https://www.flickrhelp.com/hc/en-us/articles/4404071066260-Brand-guidelines). Plus, it’s a meta-allusion to the proud literary & artistic history of Massachusetts. Yes, the name is a mouthful (ahem), so feel free to just call it “BP” if you prefer. 
 
 [^2]: Apple’s automatic photo analysis capabilities have some limitations, to be sure — [see my post on how Photos handles concert detection](https://cdevers.github.io/2026/03/17/Where-Is-My-Mind.html), and no this isn’t fixed yet thankyouverymuch — but it’s still quite useful overall.
 
