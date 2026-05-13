@@ -1,0 +1,70 @@
+{% comment %}
+  _includes/carousel.html
+
+  Usage:
+    {% include carousel.html images=page.carousel_images label="Description for screen readers" %}
+
+  In your post's front matter, define the images array:
+
+    carousel_images:
+      - path: /assets/images/blog/YYYY-MM-DD/image-1.jpg
+        alt: "Alt text for image 1"
+        caption: "Optional caption"
+      - path: /assets/images/blog/YYYY-MM-DD/image-2.jpg
+        alt: "Alt text for image 2"
+        caption: "Optional caption"
+
+  The `label` parameter is optional; it sets the accessible name on the carousel.
+{% endcomment %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/css/splide.min.css">
+<style>
+  .image-carousel {
+    max-width: 700px;
+    margin: 2em auto;
+  }
+  .image-carousel .splide__slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .image-carousel figcaption {
+    text-align: center;
+    font-size: 0.85em;
+    color: #666;
+    margin-top: 0.5em;
+  }
+</style>
+
+<div class="image-carousel splide" aria-label="{{ include.label | default: 'Image carousel' }}">
+  <div class="splide__track">
+    <ul class="splide__list">
+      {% for image in include.images %}
+        <li class="splide__slide">
+          <figure>
+            <img src="{{ image.path | relative_url }}" alt="{{ image.alt }}">
+            {% if image.caption %}
+              <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+          </figure>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4/dist/js/splide.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.image-carousel').forEach(function (el) {
+      new Splide(el, {
+        type: 'loop',
+        pagination: true,
+        arrows: true,
+        autoplay: false,
+      }).mount();
+    });
+  });
+</script>
