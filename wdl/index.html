@@ -481,6 +481,17 @@
     #toast.visible { transform: translateX(-50%) translateY(0); }
 
     .hidden { display: none !important; }
+
+    /* ---- KEYBOARD HINT ---- */
+    .kbd-hint {
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      font-size: 10px;
+      color: var(--muted);
+      font-family: 'IBM Plex Mono', monospace;
+      letter-spacing: 0.3px;
+    }
   </style>
 </head>
 <body>
@@ -514,7 +525,7 @@
         autocapitalize="none"
         spellcheck="false"
         inputmode="text"
-        autofocus>
+        >
 
       <div class="tiles-row" id="tiles-row"></div>
 
@@ -534,6 +545,7 @@
           <div class="legend-swatch" style="background:var(--x-tile)"></div>x&nbsp;=&nbsp;duplicate
         </div>
       </div>
+      <p class="kbd-hint">↩&nbsp;add &nbsp;·&nbsp; −&nbsp;undo &nbsp;·&nbsp; 0&nbsp;clear</p>
     </div>
 
     <!-- Guess history -->
@@ -542,7 +554,7 @@
         <span class="section-label">Guesses &amp; candidates</span>
         <div class="action-btns">
           <button class="btn-sm" id="share-btn">Share</button>
-          <button class="btn-sm" id="clear-btn">Clear</button>
+          <button class="btn-sm" id="clear-btn" title="Clear all guesses (keyboard: 0)">Clear</button>
         </div>
       </div>
       <div id="guess-list"></div>
@@ -614,6 +626,7 @@ async function loadData() {
     }
 
     renderAll();
+    document.getElementById('word-input').focus();
   } catch (err) {
     document.getElementById('loading-state').classList.add('hidden');
     const el = document.getElementById('error-state');
@@ -822,11 +835,9 @@ function renderGuesses() {
       const undoBtn = document.createElement('button');
       undoBtn.className = 'undo-btn';
       undoBtn.textContent = '🗑️';
-      undoBtn.setAttribute('aria-label', 'Remove last guess');
-      undoBtn.addEventListener('click', () => {
-        guesses.pop();
-        renderAll();
-      });
+      undoBtn.setAttribute('aria-label', 'Remove last guess (keyboard: −)');
+      undoBtn.setAttribute('title', 'Remove last guess (keyboard: −)');
+      undoBtn.addEventListener('click', undoLastGuess);
       row.appendChild(undoBtn);
     }
 
@@ -956,6 +967,23 @@ function addGuess() {
 }
 
 // ─────────────────────────────────────────────
+// UNDO / CLEAR  (shared by buttons and keyboard shortcuts)
+// ─────────────────────────────────────────────
+function undoLastGuess() {
+  if (guesses.length === 0) return;
+  guesses.pop();
+  renderAll();
+}
+
+function clearAll() {
+  guesses     = [];
+  currentWord = '';
+  tileStates  = ['_','_','_','_','_'];
+  document.getElementById('word-input').value = '';
+  renderAll();
+}
+
+// ─────────────────────────────────────────────
 // EVENT WIRING
 // ─────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
@@ -978,23 +1006,65 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   inp.addEventListener('keydown', e => {
-    if (e.key === 'Enter' && currentWord.length === 5) addGuess();
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.key === 'Enter' && currentWord.length === 5) { addGuess(); return; }
+    // − : undo last guess
+    if (e.key === '-') {
+      e.preventDefault();
+      undoLastGuess();
+      inp.focus();
+      return;
+    }
+    // 0 (when input is empty) : clear all guesses
+    if (e.key === '0' && inp.value === '') {
+      e.preventDefault();
+      clearAll();
+      inp.focus();
+      return;
+    }
+    // Backspace on empty input : undo last guess (natural keyboard gesture)
+    if (e.key === 'Backspace' && inp.value === '') {
+      e.preventDefault();
+      undoLastGuess();
+      inp.focus();
+    }
   });
 
   document.getElementById('add-btn').addEventListener('click', addGuess);
 
   document.getElementById('clear-btn').addEventListener('click', () => {
-    guesses     = [];
-    currentWord = '';
-    tileStates  = ['_','_','_','_','_'];
-    document.getElementById('word-input').value = '';
-    renderAll();
+    clearAll();
+    inp.focus();
   });
 
   document.getElementById('share-btn').addEventListener('click', () => {
     navigator.clipboard.writeText(location.href)
       .then(() => toast('Link copied!'))
       .catch(() => toast('Copy failed'));
+  });
+
+  // Global keyboard shortcuts: work even when focus has drifted away from input.
+  // − undo last guess · 0 clear all · any letter refocuses the input.
+  document.addEventListener('keydown', e => {
+    if (!inp || inp.disabled) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (document.activeElement === inp) return; // input's own handler takes it
+
+    if (e.key === '-') {
+      undoLastGuess();
+      inp.focus();
+      return;
+    }
+    if (e.key === '0') {
+      clearAll();
+      inp.focus();
+      return;
+    }
+    // Any letter key: redirect focus to the input so the user never has to click
+    if (e.key.length === 1 && /[a-zA-Z]/.test(e.key)) {
+      inp.focus();
+      // Don't preventDefault — the character follows naturally into the focused input
+    }
   });
 });
 
