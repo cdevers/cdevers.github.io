@@ -12,6 +12,12 @@ Before tonight, the pinnacle was being in a sold out crowd at Fenway Park, singi
 
 This topped that.
 
+{% include image.html 
+   path="/assets/images/blog/2026-06-27/SolidSound_2026_Wilco_Billy-Bragg_Natalie-Merchant_Hugo-Burnham_Nora-Guthrie-and-family.jpg"
+   alt="Solid Sound Festival 2026: Wilco, Billy Bragg & friends (Natalie Merchant from 10,000 Maniacs, Hugo Burnham from Gang of Four) joined by Nora Guthrie and family to perform Woody Guthrie’s “This Land Is Your Land”." 
+   caption='Solid Sound Festival 2026: <a href="https://en.wikipedia.org/wiki/Wilco">Wilco</a>, <a href="https://en.wikipedia.org/wiki/Billy_Bragg">Billy Bragg</a> & friends (<a href="https://en.wikipedia.org/wiki/Natalie_Merchant">Natalie Merchant</a> from <a href="https://en.wikipedia.org/wiki/10,000_Maniacs">10,000 Maniacs</a>, <a href="https://en.wikipedia.org/wiki/Hugo_Burnham">Hugo Burnham</a> from <a href="https://en.wikipedia.org/wiki/Gang_of_Four_(band)">Gang of Four</a>) joined by <a href="https://en.wikipedia.org/wiki/Nora_Guthrie">Nora Guthrie</a> and family to perform <a href="https://en.wikipedia.org/wiki/Woody_Guthrie">Woody Guthrie</a>'s “<a href="https://en.wikipedia.org/wiki/This_Land_Is_Your_Land">This Land Is Your Land</a>”.
+   width="700" %}
+
 Almost 30 years ago, Wilco & Billy Bragg got permission from the Woody Guthrie estate to produce music based on notebooks of poems & lyrics he left behind, but never recorded music for. Tonight, for the first time, they played those songs live. 
 
 But that wasn’t the transcendent part. The transcendent part was when they closed the set by inviting on other bands — Gang Of Four, the Mekons, Natalie Merchant — along with Woody’s daughter, Nora Guthrie, and what seemed like about fifty of Woody’s grandkids & great-grandkids.
@@ -24,9 +30,4 @@ Reader, I cried. Heck, I’m teary just typing this. Every kid learns this song.
 
 This land was made for you and me. 
 
-{% include image.html 
-   path="/assets/images/blog/2026-06-27/SolidSound_2026_Wilco_Billy-Bragg_Natalie-Merchant_Hugo-Burnham_Nora-Guthrie-and-family.jpg"
-   alt="Sold Sound Festival 2026: Wilco, Billy Bragg & friends (Natalie Merchant from 10,000 Maniacs, Hugo Burnham from Gang of Four) joined by Nora Guthrie and family to perform Woody Guthrie's “This Land Is Your Land”." 
-   caption='Solid Sound Festival 2026: <a href="https://en.wikipedia.org/wiki/Wilco">Wilco</a>, <a href="https://en.wikipedia.org/wiki/Billy_Bragg">Billy Bragg</a> & friends (<a href="https://en.wikipedia.org/wiki/Natalie_Merchant">Natalie Merchant</a> from <a href="https://en.wikipedia.org/wiki/10,000_Maniacs">10,000 Maniacs</a>, <a href="https://en.wikipedia.org/wiki/Hugo_Burnham">Hugo Burnham</a> from <a href="https://en.wikipedia.org/wiki/Gang_of_Four_(band)">Gang of Four</a>) joined by <a href="https://en.wikipedia.org/wiki/Nora_Guthrie">Nora Guthrie</a> and family to perform <a href="https://en.wikipedia.org/wiki/Woody_Guthrie">Woody Guthrie</a>'s “<a href="https://en.wikipedia.org/wiki/This_Land_Is_Your_Land">This Land Is Your Land</a>”.
-   width="700" %}
-
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/YuPYG5M7xBU?si=z7x5TTZt-w4nTN9y&amp;start=1132" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
