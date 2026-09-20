@@ -93,7 +93,7 @@
     var style = document.createElement('style');
     style.id = 'solarclock-fx-style';
     style.textContent = [
-      '.sc-fx { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }',
+      '.sc-fx { position: absolute; inset: 0; pointer-events: none; overflow: hidden; z-index: 0; }',
       '.sc-cloud { position: absolute; background: rgba(255,255,255,0.55); border-radius: 50%; filter: blur(8px); }',
       '.sc-fog { position: absolute; inset: 0; background: rgba(225,225,232,0.28); backdrop-filter: blur(2px); }',
       '.sc-drop { position: absolute; top: 0; width: 2px; background: rgba(210,225,245,0.55); animation: sc-fall linear infinite; }',
@@ -166,23 +166,23 @@
     }
   }
 
-  function renderMoon(el) {
+  function renderMoon(el, position) {
     var m = document.createElement('div');
     m.className = 'sc-moon';
     m.style.width = '46px';
     m.style.height = '46px';
-    m.style.right = '8%';
-    m.style.top = '10%';
+    var pos = position || { right: '8%', top: '10%' };
+    Object.keys(pos).forEach(function (key) { m.style[key] = pos[key]; });
     el.appendChild(m);
   }
 
-  function render(el, weather, isNight) {
+  function render(el, weather, isNight, moonPosition) {
     clearEl(el);
     var category = weather ? weather.category : 'clear';
 
     if (isNight && (category === 'clear' || category === 'cloudy')) {
       renderStars(el, 60);
-      if (category === 'clear') renderMoon(el);
+      if (category === 'clear') renderMoon(el, moonPosition);
     }
 
     if (category === 'cloudy') renderClouds(el, 3);
@@ -222,7 +222,7 @@
         if (stopped) return;
         var elevation = SolarClock.solarElevationDeg(new Date(), lat, lon);
         var isNight = elevation < -0.833;
-        render(fx, weather, isNight);
+        render(fx, weather, isNight, opts.moonPosition);
         if (typeof opts.onWeather === 'function') opts.onWeather(weather);
       });
     }

@@ -6,8 +6,16 @@
 <title>Evening: The Fall of Day — a solar clock</title>
 <style>
   :root {
-    --ink: #eae4d6;
-    --dim: #b9b3a2;
+    --wall: #f4f1ea;
+    --ink: #2b2620;
+    --dim: #6b6355;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --wall: #17140f;
+      --ink: #eae4d6;
+      --dim: #b9b3a2;
+    }
   }
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
@@ -18,8 +26,7 @@
     padding: 4vw 4vw 2vw;
     color: var(--ink);
     font-family: ui-serif, Georgia, "Times New Roman", serif;
-    background: linear-gradient(180deg, #12172b 0%, #3a2e4d 100%); /* static fallback until located */
-    transition: background 3s ease;
+    background: var(--wall); /* a plain gallery wall -- no longer time/weather driven */
     overflow-x: hidden;
   }
 
@@ -61,7 +68,15 @@
   }
   .stage > * { position: absolute; inset: 0; }
 
+  .sky-weather {
+    /* holds the tint gradient + the weather-fx layer; the artwork
+       (next sibling) multiplies against this whole composite, so
+       weather stays confined to the frame instead of the page */
+    overflow: hidden;
+  }
   .tint {
+    position: absolute;
+    inset: 0;
     background: linear-gradient(180deg, #12172b 0%, #3a2e4d 100%);
   }
   .artwork {
@@ -120,7 +135,12 @@
       <div class="frame-outer">
         <div class="frame-gold">
           <div class="stage" id="stage">
-            <div class="tint" id="tint"></div>
+            <div class="sky-weather" id="sky-weather">
+              <div class="tint" id="tint"></div>
+              <!-- weather effects (clouds/rain/snow/stars/moon) are inserted
+                   here by SolarClock.attachWeatherFX, so they sit under the
+                   artwork and get multiplied along with the tint -->
+            </div>
             <picture>
               <source srcset="angel.webp" type="image/webp">
               <img class="artwork" src="angel.jpg"
@@ -149,9 +169,11 @@
     var whereEl = document.getElementById('where');
     var tintEl = document.getElementById('tint');
 
-    // One location lookup drives everything: the room's ambient
-    // sky/weather (on <body>), the painting's gallery-lit tint, and
-    // the clock reading.
+    // One location lookup drives everything: the painting's gallery-lit
+    // tint, the weather layer confined to the frame, and the clock
+    // reading. The wall around the frame is a static, theme-aware
+    // color (see the :root / prefers-color-scheme rules above) --
+    // no longer tied to time of day.
     SolarClock.getLocation().then(function (loc) {
       if (!loc) {
         whereEl.textContent = 'Location unavailable — showing the clock without it.';
@@ -162,9 +184,12 @@
       whereEl.textContent = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
 
       SolarClock.attach(clockEl, { lat: loc.lat, lon: loc.lon });
-      SolarClock.attachSky(document.body, { lat: loc.lat, lon: loc.lon });
-      SolarClock.attachWeatherFX(document.body, { lat: loc.lat, lon: loc.lon });
       SolarClock.attachPaintingTint(tintEl, { lat: loc.lat, lon: loc.lon, minLightness: 0.22 });
+      SolarClock.attachWeatherFX(document.getElementById('sky-weather'), {
+        lat: loc.lat,
+        lon: loc.lon,
+        moonPosition: { left: '6%', top: '8%' }, // this painting's open sky is upper-left, not upper-right
+      });
     });
   </script>
 </body>
