@@ -25,8 +25,6 @@
     transition: background 2s ease;
   }
   main {
-    position: relative;
-    z-index: 1;
     text-align: center;
     max-width: 26rem;
   }
@@ -61,14 +59,12 @@
   </main>
 
   <script src="solarclock.js"></script>
-  <script src="solarclock-weather.js"></script>
   <script>
     var clockEl = document.getElementById('clock');
     var whereEl = document.getElementById('where');
 
-    // Look up location once, then drive the clock, sky gradient, and
-    // weather overlay all from it -- avoids prompting for permission
-    // more than once.
+    // Look up location once, then drive both the clock and the sky
+    // gradient from it -- avoids prompting for permission twice.
     SolarClock.getLocation().then(function (loc) {
       if (!loc) {
         whereEl.textContent = 'location unavailable — showing the clock without it';
@@ -76,20 +72,10 @@
       }
       var src = loc.source === 'gps' ? 'precise location' : 'approximate, via IP';
       var place = loc.city ? loc.city + ' — ' : '';
+      whereEl.textContent = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
 
       SolarClock.attach(clockEl, { lat: loc.lat, lon: loc.lon });
       SolarClock.attachSky(document.body, { lat: loc.lat, lon: loc.lon });
-      SolarClock.attachWeatherFX(document.body, {
-        lat: loc.lat,
-        lon: loc.lon,
-        onWeather: function (weather) {
-          var cond = weather ? weather.label + ', ' + Math.round(weather.tempF) + '°F — ' : '';
-          whereEl.textContent = cond + place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
-        },
-      });
-
-      // Show location immediately; weather label fills in once it loads.
-      whereEl.textContent = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
     });
   </script>
 </body>
