@@ -201,6 +201,59 @@
     return a + (b - a) * t;
   }
 
+  // ---- small RGB <-> HSL helpers, used to floor a color's lightness
+  // (so a "night" tint stays dimly visible instead of crushing to
+  // black -- the museum-painting overlay leans on this) ----
+
+  function rgbToHsl(r, g, b) {
+    r /= 255; g /= 255; b /= 255;
+    var max = Math.max(r, g, b), min = Math.min(r, g, b);
+    var h, s, l = (max + min) / 2;
+    if (max === min) {
+      h = s = 0;
+    } else {
+      var d = max - min;
+      s = l > 0.5 ? d / (2 - max - min) : d / (max + min);
+      switch (max) {
+        case r: h = (g - b) / d + (g < b ? 6 : 0); break;
+        case g: h = (b - r) / d + 2; break;
+        default: h = (r - g) / d + 4; break;
+      }
+      h /= 6;
+    }
+    return [h, s, l];
+  }
+
+  function hue2rgb(p, q, t) {
+    if (t < 0) t += 1;
+    if (t > 1) t -= 1;
+    if (t < 1 / 6) return p + (q - p) * 6 * t;
+    if (t < 1 / 2) return q;
+    if (t < 2 / 3) return p + (q - p) * (2 / 3 - t) * 6;
+    return p;
+  }
+
+  function hslToRgb(h, s, l) {
+    var r, g, b;
+    if (s === 0) {
+      r = g = b = l;
+    } else {
+      var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+      var p = 2 * l - q;
+      r = hue2rgb(p, q, h + 1 / 3);
+      g = hue2rgb(p, q, h);
+      b = hue2rgb(p, q, h - 1 / 3);
+    }
+    return [r * 255, g * 255, b * 255];
+  }
+
+  function clampLightness(c, minL) {
+    if (minL == null) return c;
+    var hsl = rgbToHsl(c[0], c[1], c[2]);
+    if (hsl[2] < minL) hsl[2] = minL;
+    return hslToRgb(hsl[0], hsl[1], hsl[2]);
+  }
+
   function colorForElevation(stops, elevation) {
     if (elevation <= stops[0][0]) return stops[0][1];
     for (var i = 0; i < stops.length - 1; i++) {
@@ -223,12 +276,21 @@
 
   // Returns { elevation, zenith, horizon } -- zenith/horizon as
   // "rgb(r, g, b)" strings, ready to drop into a CSS gradient.
-  function skyColors(nowUTC, lat, lon) {
+  // Pass minLightness (0-1) to floor how dark the result can get --
+  // e.g. 0.22 keeps a "gallery lighting" level so an overlay tinted
+  // by this color never goes fully black at night.
+  function skyColors(nowUTC, lat, lon, minLightness) {
     var elevation = solarElevationDeg(nowUTC, lat, lon);
+    var z = colorForElevation(ZENITH_STOPS, elevation);
+    var h = colorForElevation(HORIZON_STOPS, elevation);
+    if (minLightness != null) {
+      z = clampLightness(z, minLightness);
+      h = clampLightness(h, minLightness);
+    }
     return {
       elevation: elevation,
-      zenith: toRgbString(colorForElevation(ZENITH_STOPS, elevation)),
-      horizon: toRgbString(colorForElevation(HORIZON_STOPS, elevation)),
+      zenith: toRgbString(z),
+      horizon: toRgbString(h),
     };
   }
 
