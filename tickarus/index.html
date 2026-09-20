@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solar Clock</title>
+<style>
+  :root {
+    --ink: #eae4d6;
+    --dim: #b9b3a2;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+  body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    color: var(--ink);
+    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    background: linear-gradient(180deg, #12172b 0%, #3a2e4d 100%); /* static fallback until located */
+    transition: background 2s ease;
+  }
+  main {
+    text-align: center;
+    max-width: 26rem;
+  }
+  .eyebrow {
+    font-size: 0.85rem;
+    color: var(--dim);
+    letter-spacing: 0.02em;
+    margin: 0 0 0.75rem;
+  }
+  #clock {
+    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-size: clamp(2.5rem, 10vw, 4.5rem);
+    font-weight: 500;
+    color: var(--ink);
+    letter-spacing: 0.02em;
+    margin: 0;
+    text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35);
+  }
+  #where {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    color: var(--dim);
+    line-height: 1.5;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">the sun's clock, not the world's</p>
+    <p id="clock">--:--:--</p>
+    <p id="where">locating…</p>
+  </main>
+
+  <script src="solarclock.js"></script>
+  <script>
+    var clockEl = document.getElementById('clock');
+    var whereEl = document.getElementById('where');
+
+    // Look up location once, then drive both the clock and the sky
+    // gradient from it -- avoids prompting for permission twice.
+    SolarClock.getLocation().then(function (loc) {
+      if (!loc) {
+        whereEl.textContent = 'location unavailable — showing the clock without it';
+        return;
+      }
+      var src = loc.source === 'gps' ? 'precise location' : 'approximate, via IP';
+      var place = loc.city ? loc.city + ' — ' : '';
+      whereEl.textContent = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
+
+      SolarClock.attach(clockEl, { lat: loc.lat, lon: loc.lon });
+      SolarClock.attachSky(document.body, { lat: loc.lat, lon: loc.lon });
+    });
+  </script>
+</body>
+</html>
