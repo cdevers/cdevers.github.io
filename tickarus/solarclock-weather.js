@@ -4,8 +4,9 @@
  * Pulls current conditions from Open-Meteo (free, no API key,
  * designed for direct client-side use) and draws a lightweight CSS
  * effects layer on top of the sky gradient: clouds, rain, snow, fog,
- * stars, and a moon at night. Falls back to "just stars/moon by time
- * of day, no weather" if the fetch fails for any reason — it never
+ * and stars at night (the sun/moon themselves are handled by
+ * solarclock-celestial.js). Falls back to "just stars by time of
+ * day, no weather" if the fetch fails for any reason — it never
  * blocks the clock or the plain sky-color gradient from working.
  *
  * Requires solarclock.js to be loaded first.
@@ -99,7 +100,6 @@
       '.sc-drop { position: absolute; top: 0; width: 2px; background: rgba(210,225,245,0.55); animation: sc-fall linear infinite; }',
       '.sc-flake { position: absolute; top: 0; border-radius: 50%; background: rgba(255,255,255,0.9); animation: sc-drift linear infinite; }',
       '.sc-star { position: absolute; border-radius: 50%; background: #fff; animation: sc-twinkle ease-in-out infinite; }',
-      '.sc-moon { position: absolute; border-radius: 50%; background: #f3f1e6; box-shadow: 0 0 24px 6px rgba(243,241,230,0.5); }',
       '@keyframes sc-fall { from { transform: translateY(-10vh); } to { transform: translateY(110vh); } }',
       '@keyframes sc-drift { from { transform: translateY(-10vh) translateX(0); } to { transform: translateY(110vh) translateX(24px); } }',
       '@keyframes sc-twinkle { 0%, 100% { opacity: 0.2; } 50% { opacity: 1; } }',
@@ -166,23 +166,12 @@
     }
   }
 
-  function renderMoon(el, position) {
-    var m = document.createElement('div');
-    m.className = 'sc-moon';
-    m.style.width = '46px';
-    m.style.height = '46px';
-    var pos = position || { right: '8%', top: '10%' };
-    Object.keys(pos).forEach(function (key) { m.style[key] = pos[key]; });
-    el.appendChild(m);
-  }
-
-  function render(el, weather, isNight, moonPosition) {
+  function render(el, weather, isNight) {
     clearEl(el);
     var category = weather ? weather.category : 'clear';
 
     if (isNight && (category === 'clear' || category === 'cloudy')) {
       renderStars(el, 60);
-      if (category === 'clear') renderMoon(el, moonPosition);
     }
 
     if (category === 'cloudy') renderClouds(el, 3);
@@ -222,7 +211,7 @@
         if (stopped) return;
         var elevation = SolarClock.solarElevationDeg(new Date(), lat, lon);
         var isNight = elevation < -0.833;
-        render(fx, weather, isNight, opts.moonPosition);
+        render(fx, weather, isNight);
         if (typeof opts.onWeather === 'function') opts.onWeather(weather);
       });
     }

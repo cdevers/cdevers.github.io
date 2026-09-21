@@ -9,6 +9,7 @@
     --wall: #f4f1ea;
     --ink: #2b2620;
     --dim: #6b6355;
+    --serif: "Caslon", "Big Caslon", "Adobe Caslon Pro", Garamond, "EB Garamond", "Times New Roman", Times, serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -25,7 +26,7 @@
     justify-content: center;
     padding: 4vw 4vw 2vw;
     color: var(--ink);
-    font-family: ui-serif, Georgia, "Times New Roman", serif;
+    font-family: var(--serif);
     background: var(--wall); /* a plain gallery wall -- no longer time/weather driven */
     overflow-x: hidden;
   }
@@ -88,26 +89,37 @@
   }
 
   .readout {
-    inset: auto 5% 5% auto;
-    text-align: right;
+    inset: 5% auto auto 5%;
+    text-align: left;
     pointer-events: none;
   }
   .readout .eyebrow {
     margin: 0;
-    font-family: ui-serif, Georgia, serif;
+    font-family: var(--serif);
     font-size: clamp(0.6rem, 1.2vw, 0.8rem);
     letter-spacing: 0.18em;
     text-transform: uppercase;
-    color: rgba(242, 237, 224, 0.75);
+    color: rgba(242, 237, 224, 0.8);
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9);
   }
   .readout .time {
     margin: 0.15rem 0 0;
-    font-family: ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, monospace;
+    font-family: var(--serif);
+    font-variant-numeric: tabular-nums; /* keeps digit widths steady without a monospace font */
     font-size: clamp(1.15rem, 3vw, 1.9rem);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.02em;
     color: #f6f1e4;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.55);
+  }
+  /* toggled by JS from the current sky brightness, so the readout
+     stays legible against both a dark night sky and a pale daytime one */
+  .readout.on-light .eyebrow {
+    color: rgba(40, 34, 26, 0.8);
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.85);
+  }
+  .readout.on-light .time {
+    color: #1e1a14;
+    text-shadow: 0 1px 4px rgba(255, 255, 255, 0.85), 0 0 20px rgba(255, 255, 255, 0.5);
   }
 
   figcaption {
@@ -164,15 +176,24 @@
   <script src="solarclock.js"></script>
   <script src="solarclock-weather.js"></script>
   <script src="solarclock-painting.js"></script>
+  <script src="solarclock-celestial.js"></script>
   <script>
     var clockEl = document.getElementById('clock');
     var whereEl = document.getElementById('where');
     var tintEl = document.getElementById('tint');
+    var readoutEl = document.querySelector('.readout');
+
+    function luminanceOfRgbString(rgbStr) {
+      var m = /rgb\((\d+),\s*(\d+),\s*(\d+)\)/.exec(rgbStr);
+      if (!m) return 255;
+      var r = +m[1], g = +m[2], b = +m[3];
+      return (r * 299 + g * 587 + b * 114) / 1000;
+    }
 
     // One location lookup drives everything: the painting's gallery-lit
-    // tint, the weather layer confined to the frame, and the clock
-    // reading. The wall around the frame is a static, theme-aware
-    // color (see the :root / prefers-color-scheme rules above) --
+    // tint, the weather layer confined to the frame, the sun/moon, and
+    // the clock reading. The wall around the frame is a static, theme-
+    // aware color (see the :root / prefers-color-scheme rules above) --
     // no longer tied to time of day.
     SolarClock.getLocation().then(function (loc) {
       if (!loc) {
@@ -184,11 +205,30 @@
       whereEl.textContent = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
 
       SolarClock.attach(clockEl, { lat: loc.lat, lon: loc.lon });
-      SolarClock.attachPaintingTint(tintEl, { lat: loc.lat, lon: loc.lon, minLightness: 0.22 });
+
+      // Readout is in the top-left, over what's usually sky rather than
+      // the water/reflection, so the *zenith* color (top of the gradient)
+      // is the right proxy for "what's behind the text right now."
+      SolarClock.attachPaintingTint(tintEl, {
+        lat: loc.lat,
+        lon: loc.lon,
+        minLightness: 0.22,
+        onUpdate: function (colors) {
+          var light = luminanceOfRgbString(colors.zenith) > 150;
+          readoutEl.classList.toggle('on-light', light);
+        },
+      });
+
       SolarClock.attachWeatherFX(document.getElementById('sky-weather'), {
         lat: loc.lat,
         lon: loc.lon,
-        moonPosition: { left: '6%', top: '8%' }, // this painting's open sky is upper-left, not upper-right
+      });
+
+      // Sun by day, moon (with phase) by night, both positioned by real
+      // elevation/azimuth -- see solarclock-celestial.js for the mapping.
+      SolarClock.attachCelestial(document.getElementById('sky-weather'), {
+        lat: loc.lat,
+        lon: loc.lon,
       });
     });
   </script>

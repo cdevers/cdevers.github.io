@@ -149,11 +149,11 @@
 
   // ---------- Sun elevation & sky color ----------
 
-  // Solar elevation angle in degrees (negative = below horizon) for a
-  // real-world instant. Independent of the elastic solar-clock math
-  // above -- this drives the sky color, which should track the real
-  // sun, not the warped clock.
-  function solarElevationDeg(nowUTC, lat, lon) {
+  // Full sun position: elevation + azimuth (degrees), azimuth measured
+  // from true north, clockwise (N=0, E=90, S=180, W=270). Also returns
+  // hourAngle since callers occasionally need the sign (before/after
+  // local transit).
+  function solarPosition(nowUTC, lat, lon) {
     var gamma = fracYearGamma(nowUTC);
     var eqtime = equationOfTime(gamma); // minutes
     var decl = declination(gamma);      // radians
@@ -168,7 +168,23 @@
 
     var sinElev = Math.sin(latR) * Math.sin(decl) + Math.cos(latR) * Math.cos(decl) * Math.cos(ha);
     sinElev = Math.max(-1, Math.min(1, sinElev));
-    return (Math.asin(sinElev) * 180) / Math.PI;
+    var elevation = (Math.asin(sinElev) * 180) / Math.PI;
+
+    var elevR = (elevation * Math.PI) / 180;
+    var cosAz = (Math.sin(decl) - Math.sin(elevR) * Math.sin(latR)) / (Math.cos(elevR) * Math.cos(latR));
+    cosAz = Math.max(-1, Math.min(1, cosAz));
+    var azimuth = (Math.acos(cosAz) * 180) / Math.PI;
+    if (Math.sin(ha) > 0) azimuth = 360 - azimuth; // afternoon: sun is west of south/north
+
+    return { elevation: elevation, azimuth: azimuth, hourAngle: hourAngleDeg };
+  }
+
+  // Solar elevation angle in degrees (negative = below horizon) for a
+  // real-world instant. Independent of the elastic solar-clock math
+  // above -- this drives the sky color, which should track the real
+  // sun, not the warped clock.
+  function solarElevationDeg(nowUTC, lat, lon) {
+    return solarPosition(nowUTC, lat, lon).elevation;
   }
 
   // Color stops as [elevationDeg, [r,g,b]], ascending by elevation.
@@ -409,6 +425,7 @@
     solarEventsUTC: solarEventsUTC,
     currentSolarHour: currentSolarHour,
     solarElevationDeg: solarElevationDeg,
+    solarPosition: solarPosition,
     skyColors: skyColors,
     formatHour: formatHour,
     getLocation: getLocation,
