@@ -266,8 +266,8 @@
     var lastWeather = null;
 
     function refreshWeather(lat, lon) {
-      if (!SolarClock.getWeather) return; // weather addon not loaded -- no cloud gate
-      SolarClock.getWeather(lat, lon).then(function (w) { lastWeather = w; });
+      if (!SolarClock.getWeather) return Promise.resolve(); // weather addon not loaded -- no cloud gate
+      return SolarClock.getWeather(lat, lon).then(function (w) { lastWeather = w; });
     }
 
     function update(lat, lon) {
@@ -307,9 +307,16 @@
     }
 
     function begin(lat, lon) {
-      refreshWeather(lat, lon);
-      update(lat, lon);
-      timer = setInterval(function () { update(lat, lon); }, pollMs);
+      // Wait for the first real weather answer before drawing anything --
+      // otherwise the 'clear' fallback above briefly shows the sun/moon
+      // regardless of actual conditions, then yanks it away a second
+      // later once the real category arrives. Nothing to show for that
+      // first moment is better than showing the wrong thing.
+      refreshWeather(lat, lon).then(function () {
+        if (stopped) return;
+        update(lat, lon);
+        timer = setInterval(function () { update(lat, lon); }, pollMs);
+      });
       weatherTimer = setInterval(function () { refreshWeather(lat, lon); }, weatherPollMs);
     }
 
