@@ -115,10 +115,12 @@
     return Math.random() * (max - min) + min;
   }
 
-  function renderClouds(el, count) {
+  function renderClouds(el, count, isNight) {
+    var color = isNight ? 'rgba(70,74,92,0.55)' : 'rgba(255,255,255,0.55)';
     for (var i = 0; i < count; i++) {
       var c = document.createElement('div');
       c.className = 'sc-cloud';
+      c.style.background = color;
       var w = rand(80, 220);
       c.style.width = w + 'px';
       c.style.height = (w * 0.5) + 'px';
@@ -128,12 +130,13 @@
     }
   }
 
-  function renderPrecip(el, kind, count) {
+  function renderPrecip(el, kind, count, isNight) {
     for (var i = 0; i < count; i++) {
       var p = document.createElement('div');
       var left = rand(0, 100);
       if (kind === 'snow') {
         p.className = 'sc-flake';
+        p.style.background = isNight ? 'rgba(190,195,210,0.75)' : 'rgba(255,255,255,0.9)';
         var size = rand(2, 5);
         p.style.width = size + 'px';
         p.style.height = size + 'px';
@@ -142,6 +145,7 @@
         p.style.animationDelay = rand(0, 8) + 's';
       } else {
         p.className = 'sc-drop';
+        p.style.background = isNight ? 'rgba(150,165,195,0.45)' : 'rgba(210,225,245,0.55)';
         p.style.height = rand(10, 18) + 'px';
         p.style.left = left + '%';
         p.style.animationDuration = rand(0.5, 1) + 's';
@@ -174,20 +178,21 @@
       renderStars(el, 60);
     }
 
-    if (category === 'cloudy') renderClouds(el, 3);
-    if (category === 'overcast') renderClouds(el, 6);
+    if (category === 'cloudy') renderClouds(el, 3, isNight);
+    if (category === 'overcast') renderClouds(el, 6, isNight);
     if (category === 'fog') {
       var f = document.createElement('div');
       f.className = 'sc-fog';
+      f.style.background = isNight ? 'rgba(40,42,55,0.4)' : 'rgba(225,225,232,0.28)';
       el.appendChild(f);
     }
     if (category === 'rain' || category === 'thunder') {
-      renderClouds(el, 5);
-      renderPrecip(el, 'rain', 80);
+      renderClouds(el, 5, isNight);
+      renderPrecip(el, 'rain', 80, isNight);
     }
     if (category === 'snow') {
-      renderClouds(el, 4);
-      renderPrecip(el, 'snow', 60);
+      renderClouds(el, 4, isNight);
+      renderPrecip(el, 'snow', 60, isNight);
     }
   }
 
