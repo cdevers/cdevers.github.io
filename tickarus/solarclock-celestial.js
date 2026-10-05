@@ -12,9 +12,9 @@
  *     one (this flips automatically from the sign of latitude)
  *   - left = the sunrise side (east), right = the sunset side (west)
  *
- * The sun renders in clear daytime skies; the moon renders at night
- * (clear or partly cloudy skies), with a simple light/shadow disc for
- * its current phase. Both are hidden by cloud/rain/snow/fog, using
+ * The sun renders in clear or partly-cloudy daytime skies; the moon
+ * renders the same way at night, with a simple light/shadow disc for
+ * its current phase. Both are hidden by overcast/rain/snow/fog, using
  * the same Open-Meteo category solarclock-weather.js uses -- this
  * module fetches weather independently (a second, infrequent poll;
  * not worth the plumbing to share one fetch for a personal site).
@@ -278,7 +278,7 @@
       var sizePx = opts.size || 46;
 
       var sun = SolarClock.solarPosition(now, lat, lon);
-      if (sun.elevation > 0 && category === 'clear') {
+      if (sun.elevation > 0 && (category === 'clear' || category === 'cloudy')) {
         var sp = skyPosition(sun.elevation, sun.azimuth, lat);
         var sunEl = document.createElement('div');
         sunEl.className = 'sc-sun';

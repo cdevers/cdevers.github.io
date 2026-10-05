@@ -10,12 +10,14 @@
     --ink: #2b2620;
     --dim: #6b6355;
     --serif: "Caslon", "Big Caslon", "Adobe Caslon Pro", Garamond, "EB Garamond", "Times New Roman", Times, serif;
+    --link: #2f5fa3; /* a conventional link blue -- swap for your site's actual link color if it differs */
   }
   @media (prefers-color-scheme: dark) {
     :root {
       --wall: #17140f;
       --ink: #eae4d6;
       --dim: #b9b3a2;
+      --link: #9ec1e8;
     }
   }
   * { box-sizing: border-box; }
@@ -96,7 +98,7 @@
   .readout .eyebrow {
     margin: 0;
     font-family: var(--serif);
-    font-size: clamp(0.6rem, 1.4vw, 0.8rem);
+    font-size: clamp(1.2rem, 2.8vw, 1.6rem);
     letter-spacing: 0.18em;
     text-transform: uppercase;
     color: rgba(242, 237, 224, 0.8);
@@ -106,7 +108,7 @@
     margin: 0.15rem 0 0;
     font-family: var(--serif);
     font-variant-numeric: tabular-nums; /* keeps digit widths steady without a monospace font */
-    font-size: clamp(1.35rem, 5vw, 1.9rem);
+    font-size: clamp(2.7rem, 10vw, 3.8rem);
     letter-spacing: 0.02em;
     color: #f6f1e4;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.9), 0 0 20px rgba(0, 0, 0, 0.55);
@@ -124,7 +126,7 @@
 
   figcaption {
     text-align: center;
-    max-width: 34rem;
+    width: 100%; /* match the frame's own rendered width, set by .frame-outer/.stage */
     font-size: 0.85rem;
     line-height: 1.6;
     color: var(--dim);
@@ -138,6 +140,11 @@
     margin-top: 0.35rem;
     font-size: 0.78rem;
     letter-spacing: 0.02em;
+  }
+  figcaption a {
+    color: var(--link);
+    text-decoration: underline dotted;
+    text-underline-offset: 2px;
   }
 </style>
 </head>
