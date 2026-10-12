@@ -139,11 +139,24 @@
     return String(n).padStart(2, '0');
   }
 
-  function formatHour(hour) {
+  // wholeSeconds: true drops the fractional-second digits (HH:MM:SS
+  // instead of HH:MM:SS.ss) -- steadier to look at, since the elastic
+  // solar second is rarely exactly 1 SI second long, so the fractional
+  // part doesn't tick evenly and reads as a flicker rather than a clock.
+  function formatHour(hour, wholeSeconds) {
     var h = Math.floor(hour);
     var mFull = (hour - h) * 60;
     var m = Math.floor(mFull);
     var s = (mFull - m) * 60;
+    if (wholeSeconds) {
+      var si = Math.round(s);
+      if (si >= 60) {
+        si = 0;
+        m += 1;
+        if (m >= 60) { m = 0; h = (h + 1) % 24; }
+      }
+      return pad2(h) + ':' + pad2(m) + ':' + pad2(si);
+    }
     return pad2(h) + ':' + pad2(m) + ':' + s.toFixed(2).padStart(5, '0');
   }
 
@@ -389,12 +402,17 @@
   function attach(el, opts) {
     opts = opts || {};
     var stopped = false;
+    var lastText = null;
 
     function tick(lat, lon) {
       if (stopped) return;
       var now = new Date();
       var hour = currentSolarHour(now, lat, lon);
-      el.textContent = hour === null ? 'undefined (polar day/night)' : formatHour(hour);
+      var text = hour === null ? 'undefined (polar day/night)' : formatHour(hour, opts.wholeSeconds);
+      if (text !== lastText) {
+        el.textContent = text;
+        lastText = text;
+      }
       requestAnimationFrame(function () { tick(lat, lon); });
     }
 

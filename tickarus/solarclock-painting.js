@@ -40,9 +40,20 @@
       if (typeof opts.onUpdate === 'function') opts.onUpdate(colors);
     }
 
+    var visHandler = null;
+
     function begin(lat, lon) {
       paint(lat, lon);
       timer = setInterval(function () { paint(lat, lon); }, intervalMs);
+      // Backgrounded/sleeping tabs throttle or pause setInterval, so the
+      // tint can go stale (stuck on whatever it last computed) until the
+      // next tick happens to land after the tab is active again. Force an
+      // immediate repaint the moment the tab becomes visible, instead of
+      // waiting on that.
+      visHandler = function () {
+        if (!document.hidden) paint(lat, lon);
+      };
+      document.addEventListener('visibilitychange', visHandler);
     }
 
     if (opts.lat != null && opts.lon != null) {
@@ -58,6 +69,7 @@
       stop: function () {
         stopped = true;
         if (timer) clearInterval(timer);
+        if (visHandler) document.removeEventListener('visibilitychange', visHandler);
       },
     };
   }

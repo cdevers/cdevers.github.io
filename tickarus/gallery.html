@@ -126,7 +126,9 @@
 
   figcaption {
     text-align: center;
-    width: 100%; /* match the frame's own rendered width, set by .frame-outer/.stage */
+    width: min(84vw, 860px); /* same formula as .stage -- a percentage here would resolve
+                                 against the caption's own unwrapped text width instead,
+                                 inflating the figure and stretching the frame to match */
     font-size: 0.85rem;
     line-height: 1.6;
     color: var(--dim);
@@ -212,7 +214,7 @@
       var place = loc.city ? loc.city + ' — ' : '';
       whereEl.textContent = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
 
-      SolarClock.attach(clockEl, { lat: loc.lat, lon: loc.lon });
+      SolarClock.attach(clockEl, { lat: loc.lat, lon: loc.lon, wholeSeconds: true });
 
       // Readout is in the top-left, over what's usually sky rather than
       // the water/reflection, so the *zenith* color (top of the gradient)

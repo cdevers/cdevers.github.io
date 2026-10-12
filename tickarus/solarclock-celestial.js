@@ -261,6 +261,7 @@
     var stopped = false;
     var timer = null;
     var weatherTimer = null;
+    var visHandler = null;
     var pollMs = opts.pollMs || 1000; // recompute position often; it's cheap trig, no network
     var weatherPollMs = opts.weatherPollMs || 15 * 60 * 1000;
     var lastWeather = null;
@@ -318,6 +319,14 @@
         timer = setInterval(function () { update(lat, lon); }, pollMs);
       });
       weatherTimer = setInterval(function () { refreshWeather(lat, lon); }, weatherPollMs);
+      // A backgrounded/sleeping tab throttles or pauses both timers, so
+      // the sun/moon position (and the weather gate) can go stale.
+      // Force a fresh check of both the moment the tab becomes visible.
+      visHandler = function () {
+        if (document.hidden) return;
+        refreshWeather(lat, lon).then(function () { update(lat, lon); });
+      };
+      document.addEventListener('visibilitychange', visHandler);
     }
 
     if (opts.lat != null && opts.lon != null) {
@@ -334,6 +343,7 @@
         stopped = true;
         if (timer) clearInterval(timer);
         if (weatherTimer) clearInterval(weatherTimer);
+        if (visHandler) document.removeEventListener('visibilitychange', visHandler);
       },
     };
   }

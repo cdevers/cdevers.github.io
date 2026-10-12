@@ -221,9 +221,18 @@
       });
     }
 
+    var visHandler = null;
+
     function begin(lat, lon) {
       update(lat, lon);
       timer = setInterval(function () { update(lat, lon); }, pollMs);
+      // A backgrounded/sleeping tab throttles or pauses setInterval, so
+      // conditions (and day/night) can go stale for well over pollMs.
+      // Force a fresh check the moment the tab becomes visible again.
+      visHandler = function () {
+        if (!document.hidden) update(lat, lon);
+      };
+      document.addEventListener('visibilitychange', visHandler);
     }
 
     if (opts.lat != null && opts.lon != null) {
@@ -239,6 +248,7 @@
       stop: function () {
         stopped = true;
         if (timer) clearInterval(timer);
+        if (visHandler) document.removeEventListener('visibilitychange', visHandler);
         if (fx.parentNode) fx.parentNode.removeChild(fx);
       },
     };
