@@ -212,7 +212,8 @@
       }
       var src = loc.source === 'gps' ? 'precise location' : 'approximate, via IP';
       var place = loc.city ? loc.city + ' — ' : '';
-      whereEl.textContent = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
+      var baseWhere = place + loc.lat.toFixed(2) + ', ' + loc.lon.toFixed(2) + ' (' + src + ')';
+      whereEl.textContent = baseWhere;
 
       SolarClock.attach(clockEl, { lat: loc.lat, lon: loc.lon, wholeSeconds: true });
 
@@ -232,6 +233,12 @@
       SolarClock.attachWeatherFX(document.getElementById('sky-weather'), {
         lat: loc.lat,
         lon: loc.lon,
+        // Show the current conditions after the coordinates. Beyond being
+        // nice to see, it makes it obvious why the sun/moon is hidden
+        // (they only show under clear or partly-cloudy skies).
+        onWeather: function (w) {
+          whereEl.textContent = baseWhere + (w ? ' · ' + w.label + ', ' + Math.round(w.tempF) + '°F' : '');
+        },
       });
 
       // Sun by day, moon (with phase) by night, both positioned by real
